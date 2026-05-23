@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{
+            background-color: black;
+        }
+        .galaxy{
+            width: 1200px;
+            height: 650px;
+            margin-top: 15px;
+            margin-left: 70px;
+            position: relative;
+            transform: perspective(760px) rotateX(49deg);
+        }
+        .sun{
+            height: 60px;
+            width: 60px;
+            background: linear-gradient(to left, 
+             rgb(252, 152, 113),
+             rgb(255, 82, 2));
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .solar{
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation-name: rotate;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .solar::before{
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .mercury{
+            height: 110px;
+            width: 110px;
+            border: 1px solid white;
+            animation-duration: 5s;
+        }
+        .mercury::before{
+            height: 15px;
+            width: 15px;
+            background: linear-gradient(to left, 
+             rgb(255, 128, 128),
+             rgb(255, 2, 2));
+         }
+        .venus{
+            height: 160px;
+            width: 160px;
+            border: 1px solid white;
+            animation-duration: 2s;
+        }
+        .venus::before{
+            height: 20px;
+            width: 20px;
+            background: linear-gradient(to left, 
+             rgb(231, 133, 95),
+             rgb(255, 95, 2));
+         }
+        .earth{
+            height: 220px;
+            width: 220px;
+            border: 1px solid white;
+            animation-duration: 3s;
+        }
+        .earth::before{
+            height: 25px;
+            width: 25px;
+            background-color: skyblue;
+         }
+        .mars{
+            height: 280px;
+            width: 280px;
+            border: 1px solid white;
+            animation-duration: 1s;
+        }
+        .mars::before{
+            height: 29px;
+            width: 29px;
+            background-color: rgb(207, 120, 98);
+         }
+        .jupiter{
+            height: 350px;
+            width: 350px;
+            border: 1px solid white;
+            animation-duration: 2.1s;
+        }
+        .jupiter::before{
+            height: 32px;
+            width: 32px;
+            background-color: rgb(211, 122, 100);
+         }
+        .saturn{
+            height: 425px;
+            width: 425px;
+            border: 1px solid white;
+            animation-duration: 2s;
+        }
+        .saturn::before{
+            height: 34px;
+            width: 34px;
+            background-color: rgb(54, 194, 152);
+         }
+        .uranus{
+            height: 500px;
+            width: 500px;
+            border: 1px solid white;
+            animation-duration: 2.5s;
+        }
+        .uranus::before{
+            height: 32px;
+            width: 32px;
+            background-color: rgb(109, 103, 101);
+         }
+        .neptune{
+            height: 570px;
+            width: 570px;
+            border: 1px solid white;
+            animation-duration: 1.7s;
+        }
+        .neptune::before{
+            height: 30px;
+            width: 30px;
+            background-color: rgb(253, 238, 25);
+         }
+        .pluto{
+            height: 630px;
+            width: 630px;
+             border: 1px solid rgb(255, 255, 255);
+            animation-duration: 1.9s;
+        }
+        .pluto::before{
+            height: 20px;
+            width: 20px;
+            background-color: rgb(50, 230, 14);
+        }
+
+        @keyframes rotate{
+            from{
+                transform: translate(-50%,-50%) rotate(0deg);
+            }to{
+                transform: translate(-50%,-50%) rotate(360deg); 
+            }
+        }
+    </style>
+</head>
+<body>
+   <div class="galaxy">
+    <div class="sun"></div>
+    <div class="solar mercury"></div>
+    <div class="solar venus"></div>
+    <div class="solar earth"></div>
+    <div class="solar mars"></div>
+    <div class="solar jupiter"></div>
+    <div class="solar saturn"></div>
+    <div class="solar uranus"></div>
+    <div class="solar neptune"></div>
+    <div class="solar pluto"></div>
+   </div> 
+</body>
+</html>
